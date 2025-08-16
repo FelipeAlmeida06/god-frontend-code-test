@@ -1,11 +1,10 @@
-// Card.tsx
 // instalar: npm i @volvo-cars/css
 
 import { CardContent, Text, Spacer, Card, Block, Flex, Row, Link } from "vcc-ui"
 import { Car } from "../types/car.interface";
 import Image from "next/image";
 
-import styles from "../../public/css/carCard.module.css"   // estilos
+import styles from "../../public/css/components/carCard.module.css"   // estilos
 
 interface CardProps {
     car: Car
@@ -44,7 +43,7 @@ export function CarCard(props: CardProps) {
                 src={props.car.imageUrl}
                 alt={props.car.modelName}
                 width={250}     // 400  // 300
-                height={200}>   
+                height={200}>  
             </Image>
 
             <Spacer />
