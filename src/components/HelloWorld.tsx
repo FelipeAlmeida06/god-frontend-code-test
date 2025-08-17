@@ -8,10 +8,16 @@ import { useCars } from "../hooks/useCars";
 import { CarCard } from "./CarCard";
 import { Spacer } from "./Spacer";
 
+import PaginationDesktop from "./PaginationDesktop";
+
 import styles from "../../public/css/home.module.css"   // estilos
 
 export const HelloWorld: React.FC = () => {
   const {cars} = useCars();
+
+  // Funções:
+  const onClickLeft = () => {}
+  const onClickRight = () => {}
 
   return (
     <div className={styles.homeWrapper}>
@@ -23,6 +29,8 @@ export const HelloWorld: React.FC = () => {
         {cars.map(car => 
         <CarCard key={car.id} car={car} />)}
       </div>
+
+      <PaginationDesktop onClickLeft={onClickLeft} onClickRight={onClickRight}/>
     </div>
   )
 };
