@@ -4,7 +4,7 @@
 
 Clique no link abaixo para ver a aplicação em produção hospedada na Vercel:
 
-[god-frontend-code-test](https://god-frontend-code-test-git-master-felipes-projects-7e81fd2a.vercel.app/)
+[god-frontend-code-test](https://god-frontend-code-test-lac.vercel.app/)
 
 ### Tecnologias Utilizadas
 
