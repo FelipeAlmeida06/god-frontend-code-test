@@ -1,0 +1,21 @@
+.btnWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    color: #d5d5d5;
+    border: none;
+    padding: 0;
+}
+
+.btn.active {
+    background-color: #000; /* quando ativo fica preto */
+}

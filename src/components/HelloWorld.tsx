@@ -2,18 +2,20 @@
 // Setup Volvo: npm install vcc-ui --save
 // instalar: npm install axios
 
-import React from "react";
+import React, { useState } from "react";
 import { Block, Button, Flex, Text } from "vcc-ui";
 import { useCars } from "../hooks/useCars";
 import { CarCard } from "./CarCard";
 import { Spacer } from "./Spacer";
 
 import PaginationDesktop from "./PaginationDesktop";
+import PaginationMobile from "./PaginationMobile";
 
 import styles from "../../public/css/home.module.css"   // estilos
 
 export const HelloWorld: React.FC = () => {
   const {cars} = useCars();
+  const [activeIndex, setActiveIndex] = useState(-1);       // botoes pequeno (dots) para navegação mobile -> nenhum dot selecionado no início
 
   // Funções de navegação entre os cards:
   // onClickLeft volta um card para trás
@@ -54,6 +56,21 @@ export const HelloWorld: React.FC = () => {
     }
   }
 
+  const onClickMobile = (index: number) => {
+    setActiveIndex(index);
+
+    const cardList = document.getElementById("card-list");
+    if (!cardList) return;
+
+    const card = cardList.firstElementChild as HTMLElement;
+    const cardSize = card?.clientWidth ?? 0;
+
+    cardList.scrollTo({
+      left: cardSize * index,
+      behavior: "smooth"
+    });
+  }
+
   return (
     <div className={styles.homeWrapper}>
       <Text variant="cook">Todos os modelos Recharge</Text>
@@ -66,6 +83,10 @@ export const HelloWorld: React.FC = () => {
       </div>
 
       <PaginationDesktop onClickLeft={onClickLeft} onClickRight={onClickRight}/>
+
+      <PaginationMobile onClick={onClickMobile} total={cars.length} activeIndex={activeIndex} />
     </div>
   )
 };
+
+// navegação mobile entre os cards
