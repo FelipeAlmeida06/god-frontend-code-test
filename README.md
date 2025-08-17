@@ -1,5 +1,18 @@
 # Volvo Cars (Global Online Digital)
 
+## 🚀 Acesse a Aplicação
+
+Clique no link abaixo para ver a aplicação em produção hospedada na Vercel:
+
+[god-frontend-code-test](https://god-frontend-code-test-git-master-felipes-projects-7e81fd2a.vercel.app/)
+
+### Tecnologias Utilizadas
+
+- React
+- Next.js
+- TypeScript
+- Tailwind CSS
+
 ## Front-end coding test (React)
 
 Our team's designer has come up with a new design to show our latest and greatest recharge cars on the website.
@@ -48,4 +61,3 @@ Two extra SVG icons are also provided by our designer which are stored under `do
 ## Submission
 
 Clone this repository to get started. Due to a number of reasons, not least privacy, you will be asked to zip your solution and mail it in, instead of submitting a pull-request. In order to maintain an unbiased reviewing process, please ensure to keep your name or other Personal Identifiable Information (PII) from the code.
-
