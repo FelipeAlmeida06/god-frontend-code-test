@@ -88,5 +88,3 @@ export const HelloWorld: React.FC = () => {
     </div>
   )
 };
-
-// navegação mobile entre os cards

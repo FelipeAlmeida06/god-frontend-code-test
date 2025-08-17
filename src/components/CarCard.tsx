@@ -61,13 +61,3 @@ export function CarCard(props: CardProps) {
 }
 
 export default Card;
-
-
-// href="https://www.volvocars.com/"
-// <Text variant="amundsen">{props.car.modelName}</Text>
-//<Text variant="bates" subStyle="inline-link">{props.car.modelType}</Text>
-//<Text>{props.car.imageUrl}</Text>
-
-
-// <Card href={"/learn/" + props.car.id}>
-// </Card>
